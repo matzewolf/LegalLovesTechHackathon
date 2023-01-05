@@ -4,4 +4,5 @@ dependencies:
   - pip
   - pip:
     - streamlit
-    - streamlit-firstlanguage
+    - requests
+    - python-dotenv

@@ -20,9 +20,9 @@ text = st.text_area("Gib hier die Aussage ein, die an dich gerichtet war.")
 method = st.radio(
     "Welche Auswertungsmethode möchtest du verwenden?",
     ["Automatisch durch künstliche Intelligenz", "Manuell durch Fragebogen"])
-start = st.button("Weiter")
 
-if start and method == "Automatisch durch künstliche Intelligenz":
+if method == "Automatisch durch künstliche Intelligenz":
+    start = st.button("Weiter")
     url = "https://api.firstlanguage.in/api/classify"
     load_dotenv()
     headers = {
@@ -36,22 +36,23 @@ if start and method == "Automatisch durch künstliche Intelligenz":
             "labels": ["Beleidigung", "Formalbeleidigung", "Üble Nachrede", "Verleumdung", "Sonstiges"]
         }
     }
-    res = requests.request("POST", url, json=payload, headers=headers)
-    result = res.json()
-    if res.status_code == 200:
-        st.vega_lite_chart(result, use_container_width=True, spec={
-            'mark': {'type': 'bar', 'tooltip': True},
-            'encoding': {
-                'x': {'field': 'labels', 'type': 'nominal'},
-                'y': {'field': 'scores', 'type': 'quantitative'},
-                'color': {'field': 'labels', 'type': 'nominal'}
-            }
-        })
-    else:
-        st.text(f"Error {res.status_code}:")
-        st.json(result)
+    if start:
+        res = requests.request("POST", url, json=payload, headers=headers)
+        result = res.json()
+        if res.status_code == 200:
+            st.vega_lite_chart(result, use_container_width=True, spec={
+                'mark': {'type': 'bar', 'tooltip': True},
+                'encoding': {
+                    'x': {'field': 'labels', 'type': 'nominal'},
+                    'y': {'field': 'scores', 'type': 'quantitative'},
+                    'color': {'field': 'labels', 'type': 'nominal'}
+                }
+            })
+        else:
+            st.text(f"Error {res.status_code}:")
+            st.json(result)
 
-elif start and method == "Manuell durch Fragebogen":
+elif method == "Manuell durch Fragebogen":
     result = None
     provable = st.selectbox(
         "Kann man die Aussage formal beweisen oder widerlegen?",

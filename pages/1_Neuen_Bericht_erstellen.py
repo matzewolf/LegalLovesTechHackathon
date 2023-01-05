@@ -1,7 +1,7 @@
 import streamlit as st
 
 st.markdown("""
-    # Neue Meldung
+    # Neuen Bericht erstellen
 
     > Bitte beachte, dass dieses Tool keine Rechtsberatung ersetzt.
     > Bitte konsultiere immer eine qualifizierte Anwältin oder einen qualifizierten Anwalt.

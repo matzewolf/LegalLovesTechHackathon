@@ -5,6 +5,11 @@ import requests
 from dotenv import load_dotenv
 
 
+st.set_page_config(
+    page_title="advotis – Neuen Bericht erstellen",
+    page_icon="assets/advotis_small.png",
+    layout="centered",
+)
 st.sidebar.image("assets/advotis_small.png")
 
 st.markdown("""
@@ -13,7 +18,6 @@ st.markdown("""
     Hier kannst du eine Aussage, der an dich gerichtet war, melden. Das Tool findet für dich heraus,
     ob es sich um einen potenziellen Straftatbestand handelt und wenn ja, um welchen.
 """)
-
 st.info(
     """
     Bitte beachte, dass dieses Tool keine Rechtsberatung ersetzt.
@@ -22,7 +26,6 @@ st.info(
     """,
     icon="ℹ️"
 )
-
 text = st.text_area("Gib hier die Aussage ein, die an dich gerichtet war.")
 method = st.radio(
     "Welche Auswertungsmethode möchtest du verwenden?",

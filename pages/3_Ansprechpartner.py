@@ -11,3 +11,12 @@ st.sidebar.image("assets/advotis_small.png")
 st.markdown("""
     # Ansprechpartner
 """)
+
+st.selectbox("Filter", [
+    "Meine Ansprechpartner",
+    "Spezialisierte Anwälte",
+    "Beratungsstellen",
+    "Örtliche Polizeibehörden",
+    "Staatsanwaltschaft",
+    "Amtsgericht",
+])

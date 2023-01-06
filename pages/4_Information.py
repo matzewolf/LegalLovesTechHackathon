@@ -11,13 +11,11 @@ st.sidebar.image("assets/advotis_small.png")
 st.markdown("""
     # Information
 """)
-
 stgb = st.selectbox(
     "Mich interessiert im Strafgesetzbuch (StGB)...",
-    ["§ 185 Beleidigung", "§ 186 Üble Nachrede", "§ 187 Verleumdung",
-    "§ 192 Beleidigung trotz Wahrheitsbeweises"]
+    ["", "§ 185 Beleidigung", "§ 186 Üble Nachrede",
+    "§ 187 Verleumdung", "§ 192 Beleidigung trotz Wahrheitsbeweises"]
 )
-
 if stgb == "§ 185 Beleidigung":
     st.markdown("""
         Die Beleidigung wird mit Freiheitsstrafe bis zu einem Jahr oder mit Geldstrafe und,

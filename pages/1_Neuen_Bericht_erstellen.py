@@ -5,6 +5,8 @@ import requests
 from dotenv import load_dotenv
 
 
+st.sidebar.image("assets/advotis_small.png")
+
 st.markdown("""
     # Neuen Bericht erstellen
 

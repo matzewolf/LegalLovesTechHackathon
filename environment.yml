@@ -4,5 +4,6 @@ dependencies:
   - pip
   - pip:
     - streamlit
+    - streamlit-extras
     - requests
     - python-dotenv

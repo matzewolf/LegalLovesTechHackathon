@@ -10,6 +10,8 @@ st.sidebar.image("assets/advotis_small.png")
 
 st.markdown("""
     # Verlauf
+
+    Hier kannst du deine vergangenen und laufenden Berichte einsehen.
 """)
 st.warning(
     "Diese Funktion wird in der öffentlichen Demo-Version nicht unterstützt.",

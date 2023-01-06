@@ -10,11 +10,16 @@ st.markdown("""
 
     Hier kannst du eine Aussage, der an dich gerichtet war, melden. Das Tool findet für dich heraus,
     ob es sich um einen potenziellen Straftatbestand handelt und wenn ja, um welchen.
-
-    > Bitte beachte, dass dieses Tool keine Rechtsberatung ersetzt.
-    > Bitte konsultiere immer eine qualifizierte Anwältin oder einen qualifizierten Anwalt.
-    > Wir helfen dir dabei am Ende dieses Fragebogens.
 """)
+
+st.info(
+    """
+    Bitte beachte, dass dieses Tool keine Rechtsberatung ersetzt.
+    Bitte konsultiere immer eine qualifizierte Anwältin oder einen qualifizierten Anwalt.
+    Wir helfen dir dabei am Ende dieses Fragebogens.
+    """,
+    icon="ℹ️"
+)
 
 text = st.text_area("Gib hier die Aussage ein, die an dich gerichtet war.")
 method = st.radio(
@@ -49,7 +54,7 @@ if method == "Automatisch durch künstliche Intelligenz":
                 }
             })
         else:
-            st.text(f"Error {res.status_code}:")
+            st.error(f"Error {res.status_code}:")
             st.json(result)
 
 elif method == "Manuell durch Fragebogen":

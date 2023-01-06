@@ -18,8 +18,7 @@ st.markdown("""
     Hier kannst du eine Aussage, der an dich gerichtet war, melden. Das Tool findet für dich heraus,
     ob es sich um einen potenziellen Straftatbestand handelt und wenn ja, um welchen.
 """)
-st.info(
-    """
+st.info("""
     Bitte beachte, dass dieses Tool keine Rechtsberatung ersetzt.
     Die Erstberatung, die dieses Tool bietet, kann womöglich in deinem spezifischen Einzelfall nicht zutreffen.
     Bitte konsultiere daher immer eine qualifizierte Anwältin oder einen qualifizierten Anwalt.
@@ -139,4 +138,5 @@ if valid:
             st.markdown(f"In diesem Fall handelt es sich wahrscheinlich um {result}.")
             st.info("""
                 Dieses Ergebnis ist nur eine vorläufige Einschätzung basierend auf deinen Eingaben.
-            """)
+            """,
+            icon="ℹ️")

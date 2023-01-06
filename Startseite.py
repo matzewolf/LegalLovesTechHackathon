@@ -27,7 +27,7 @@ page_3 = st.button(
 if page_3:
     switch_page("Ansprechpartner")
 page_4 = st.button(
-    ":information_source: &nbsp;&nbsp; Information",
+    ":book: &nbsp;&nbsp; Gesetzestexte",
 )
 if page_4:
-    switch_page("Information")
+    switch_page("Gesetzestexte")

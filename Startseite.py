@@ -10,9 +10,9 @@ st.set_page_config(
 st.sidebar.image("assets/advotis_small.png")
 
 st.image("assets/advotis_small.png")
-st.title("Startseite")
+st.title("🏠 &nbsp; Startseite")
 page_1 = st.button(
-    ":heavy_plus_sign: &nbsp;&nbsp; Strafbarkeit prüfen"
+    ":scales: &nbsp;&nbsp; Strafbarkeit prüfen"
 )
 if page_1:
     switch_page("Strafbarkeit_prüfen")

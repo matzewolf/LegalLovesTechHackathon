@@ -9,7 +9,7 @@ st.set_page_config(
 st.sidebar.image("assets/advotis_small.png")
 
 st.markdown("""
-    # Gesetzestexte
+    # 📖 &nbsp; Gesetzestexte
 """)
 stgb = st.selectbox(
     "Mich interessiert im Strafgesetzbuch (StGB)...",

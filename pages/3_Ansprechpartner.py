@@ -10,7 +10,7 @@ st.set_page_config(
 st.sidebar.image("assets/advotis_small.png")
 
 st.markdown("""
-    # Ansprechpartner
+    # 👥 &nbsp; Ansprechpartner
 """)
 st.components.v1.html("""
     <div data-anw-widget="217fe44880e867"></div>

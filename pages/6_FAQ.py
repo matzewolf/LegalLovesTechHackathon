@@ -8,7 +8,7 @@ st.set_page_config(
 )
 st.sidebar.image("assets/advotis_small.png")
 
-st.markdown("# FAQ – Häufig gestellte Fragen")
+st.markdown("# ❔ &nbsp; FAQ – Häufig gestellte Fragen")
 with st.expander("Was sind die nächsten Features auf der Roadmap?"):
     st.markdown("""
         - Wir wollen die künstliche Intelligenz und den Fragebogen kontinuierlich verbessern,

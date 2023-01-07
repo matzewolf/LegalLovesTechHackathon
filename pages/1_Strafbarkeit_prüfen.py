@@ -27,7 +27,7 @@ def category_to_result_text(category: str) -> str:
 
 
 st.markdown("""
-    # Strafbarkeit prüfen
+    # ⚖️ &nbsp; Strafbarkeit prüfen
 
     Hier kannst du eine Aussage, der an dich gerichtet war, melden. Das Tool findet für dich heraus,
     ob es sich um einen potenziellen Straftatbestand handelt und wenn ja, um welchen.

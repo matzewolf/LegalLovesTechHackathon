@@ -9,7 +9,7 @@ st.set_page_config(
 st.sidebar.image("assets/advotis_small.png")
 
 st.markdown("""
-    # Verlauf
+    # 🔄 &nbsp; Verlauf
 
     Hier kannst du deine vergangenen und laufenden Berichte einsehen.
 """)

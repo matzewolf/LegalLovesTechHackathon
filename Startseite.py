@@ -12,10 +12,10 @@ st.sidebar.image("assets/advotis_small.png")
 st.image("assets/advotis_small.png")
 st.title("Startseite")
 page_1 = st.button(
-    ":heavy_plus_sign: &nbsp;&nbsp; Neuen Bericht erstellen"
+    ":heavy_plus_sign: &nbsp;&nbsp; Strafbarkeit prüfen"
 )
 if page_1:
-    switch_page("Neuen_Bericht_erstellen")
+    switch_page("Strafbarkeit_prüfen")
 page_2 = st.button(
     ":arrows_counterclockwise: &nbsp;&nbsp; Verlauf"
 )

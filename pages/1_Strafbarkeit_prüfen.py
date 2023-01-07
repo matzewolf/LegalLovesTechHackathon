@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 
 
 st.set_page_config(
-    page_title="advotis – Neuen Bericht erstellen",
+    page_title="advotis – Strafbarkeit prüfen",
     page_icon="assets/advotis_small.png",
     layout="centered",
 )
@@ -27,7 +27,7 @@ def category_to_result_text(category: str) -> str:
 
 
 st.markdown("""
-    # Neuen Bericht erstellen
+    # Strafbarkeit prüfen
 
     Hier kannst du eine Aussage, der an dich gerichtet war, melden. Das Tool findet für dich heraus,
     ob es sich um einen potenziellen Straftatbestand handelt und wenn ja, um welchen.

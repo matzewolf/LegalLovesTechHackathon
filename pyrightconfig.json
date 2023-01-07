@@ -1,0 +1,4 @@
+{
+    // necessary to allow Markdown escape characters
+    "reportInvalidStringEscapeSequence": false
+}

@@ -13,7 +13,7 @@ st.set_page_config(
 st.sidebar.image("assets/advotis_small.png")
 
 
-def category_to_result_text(category: str) -> str:
+def category_to_result_text(category: str) -> str | None:
     if category == "Beleidigung":
         return "eine **Beleidigung** nach § 185 StGB"
     elif category == "Formalbeleidigung":
@@ -24,6 +24,7 @@ def category_to_result_text(category: str) -> str:
         return "**Üble Nachrede** nach § 186 StGB"
     elif category == "Sonstiges":
         return "**keinen Straftatsbestand**"
+    return None
 
 
 st.markdown("""

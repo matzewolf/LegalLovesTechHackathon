@@ -102,7 +102,7 @@ if valid:
                     Die künstliche Intelligenz hat analysiert, dass es sich in diesem Fall wahrscheinlich um {result_text} handelt.
                 """, icon="✅")
                 st.info("""
-                    Dieses Ergebnis ist eine KI-basierte Einschätzung, die nicht der Wahrheit entsprechen kann.
+                    Dieses Ergebnis ist eine KI-basierte Einschätzung, die nicht der Wahrheit entsprechen muss.
                     Bitte beachte, dass dieses Tool keine Rechtsberatung ersetzt.
                     Die Erstberatung, die dieses Tool bietet, kann womöglich in deinem spezifischen Einzelfall nicht zutreffen.
                     Bitte konsultiere daher immer eine qualifizierte Anwältin oder einen qualifizierten Anwalt.

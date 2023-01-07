@@ -2,7 +2,7 @@ import streamlit as st
 
 
 st.set_page_config(
-    page_title="advotis – Feedback",
+    page_title="advotis – FAQ",
     page_icon="assets/advotis_small.png",
     layout="centered",
 )

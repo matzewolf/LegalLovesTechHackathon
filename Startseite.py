@@ -12,32 +12,32 @@ st.sidebar.image("assets/advotis_small.png")
 st.image("assets/advotis_small.png")
 st.title("🏠 &nbsp; Startseite")
 page_1 = st.button(
-    ":scales: &nbsp;&nbsp; Strafbarkeit prüfen"
+    "⚖️ &nbsp;&nbsp; Strafbarkeit prüfen"
 )
 if page_1:
     switch_page("Strafbarkeit_prüfen")
 page_2 = st.button(
-    ":arrows_counterclockwise: &nbsp;&nbsp; Verlauf"
+    "🔄 &nbsp;&nbsp; Verlauf"
 )
 if page_2:
     switch_page("Verlauf")
 page_3 = st.button(
-    ":busts_in_silhouette: &nbsp;&nbsp; Ansprechpartner"
+    "👥 &nbsp;&nbsp; Ansprechpartner"
 )
 if page_3:
     switch_page("Ansprechpartner")
 page_4 = st.button(
-    ":book: &nbsp;&nbsp; Gesetzestexte"
+    "📖 &nbsp;&nbsp; Gesetzestexte"
 )
 if page_4:
     switch_page("Gesetzestexte")
 page_5 = st.button(
-    ":bulb: &nbsp;&nbsp; Feedback"
+    "💡 &nbsp;&nbsp; Feedback"
 )
 if page_5:
     switch_page("Feedback")
 page_6 = st.button(
-    ":grey_question: &nbsp;&nbsp; FAQ"
+    "❔ &nbsp;&nbsp; FAQ"
 )
 if page_5:
     switch_page("FAQ")

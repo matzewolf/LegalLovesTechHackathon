@@ -46,11 +46,11 @@ st.markdown("""
 """)
 valid = False
 germany = st.selectbox(
-    "Befand sich der/die Täter:in in Deutschland, als die Aussage getätigt wurde?",
+    "Befand sich der/die Täter\*in in Deutschland, als die Aussage getätigt wurde?",
     ["", "Ja", "Nein", "Weiß ich nicht"]
 )
 german = st.selectbox(
-    "Ist der/die Täter:in ein:e deutsche:r Staatsbürger:in oder lebt der/die Täter:in in Deutschland?",
+    "Ist der/die Täter\*in ein:e deutsche\*r Staatsbürger\*in oder lebt der/die Täter\*in in Deutschland?",
     ["", "Ja", "Nein", "Weiß ich nicht"]
 )
 if germany == "Ja" or german == "Ja":

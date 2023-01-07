@@ -135,7 +135,7 @@ if valid:
                 elif reputation == "Nein":
                     result = "**keinen Straftatsbestand**"
         if result:
-            st.markdown(f"In diesem Fall handelt es sich wahrscheinlich um {result}.")
+            st.success(f"In diesem Fall handelt es sich wahrscheinlich um {result}.", icon="✅")
             st.info("""
                 Dieses Ergebnis ist nur eine vorläufige Einschätzung basierend auf deinen Eingaben.
                 Du kannst auch die dazugehörigen originalen Gesetzestexte als zusätzliche Information lesen:

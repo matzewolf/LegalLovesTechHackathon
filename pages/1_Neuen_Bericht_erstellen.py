@@ -12,6 +12,20 @@ st.set_page_config(
 )
 st.sidebar.image("assets/advotis_small.png")
 
+
+def category_to_result_text(category: str) -> str:
+    if category == "Beleidigung":
+        return "eine **Beleidigung** nach § 185 StGB"
+    elif category == "Formalbeleidigung":
+        return "eine **Formalbeleidigung** nach §§ 185, 192 StGB"
+    elif category == "Verleumdung":
+        return "**Verleumdung** nach § 187 StGB"
+    elif category == "Üble Nachrede":
+        return "**Üble Nachrede** nach § 186 StGB"
+    elif category == "Sonstiges":
+        return "**keinen Straftatsbestand**"
+
+
 st.markdown("""
     # Neuen Bericht erstellen
 
@@ -23,8 +37,7 @@ st.info("""
     Die Erstberatung, die dieses Tool bietet, kann womöglich in deinem spezifischen Einzelfall nicht zutreffen.
     Bitte konsultiere daher immer eine qualifizierte Anwältin oder einen qualifizierten Anwalt.
     Wir helfen dir dabei am Ende dieses Fragebogens.
-    """,
-    icon="ℹ️"
+    """, icon="ℹ️"
 )
 
 st.markdown("""
@@ -85,6 +98,18 @@ if valid:
                         'color': {'field': 'labels', 'type': 'nominal'}
                     }
                 })
+                scores = result["scores"]
+                max_idx = scores.index(max(scores))
+                max_category = result["labels"][max_idx]
+                result_text = category_to_result_text(max_category)
+                st.success(f"""
+                    Die künstliche Intelligenz hat analysiert, dass es sich in diesem Fall wahrscheinlich um {result_text} handelt.
+                """, icon="✅")
+                st.info("""
+                    Dieses Ergebnis ist eine KI-basierte Einschätzung, die nicht der Wahrheit entsprechen kann.
+                    Du kannst die dazugehörigen originalen Gesetzestexte als zusätzliche Information lesen:
+                    [originale Gesetzestexte](Gesetzestexte)
+                """, icon="ℹ️")
             else:
                 st.error(f"Error {res.status_code}:")
                 st.json(result)
@@ -140,5 +165,4 @@ if valid:
                 Dieses Ergebnis ist nur eine vorläufige Einschätzung basierend auf deinen Eingaben.
                 Du kannst auch die dazugehörigen originalen Gesetzestexte als zusätzliche Information lesen:
                 [originale Gesetzestexte](Gesetzestexte)
-            """,
-            icon="ℹ️")
+            """, icon="ℹ️")

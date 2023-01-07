@@ -3,6 +3,7 @@ import os
 import streamlit as st
 import requests
 from dotenv import load_dotenv
+from streamlit_toggle import st_toggle_switch
 
 
 st.set_page_config(
@@ -62,7 +63,7 @@ elif germany == "Nein" or germany == "Weiß ich nicht":
         """)
 
 if valid:
-    text = st.text_area("Gib hier die Aussage ein, die an dich gerichtet war.")
+    text = st.text_input("Gib hier die Aussage ein, die an dich gerichtet war.", type="password")
     method = st.radio(
         "Welche Auswertungsmethode möchtest du verwenden?",
         ["Automatisch durch künstliche Intelligenz", "Manuell durch Fragebogen"])

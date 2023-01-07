@@ -31,16 +31,7 @@ st.markdown("""
 
     Hier kannst du eine Aussage, der an dich gerichtet war, melden. Das Tool findet für dich heraus,
     ob es sich um einen potenziellen Straftatbestand handelt und wenn ja, um welchen.
-""")
-st.info("""
-    Bitte beachte, dass dieses Tool keine Rechtsberatung ersetzt.
-    Die Erstberatung, die dieses Tool bietet, kann womöglich in deinem spezifischen Einzelfall nicht zutreffen.
-    Bitte konsultiere daher immer eine qualifizierte Anwältin oder einen qualifizierten Anwalt.
-    Wir helfen dir dabei am Ende dieses Fragebogens.
-    """, icon="ℹ️"
-)
 
-st.markdown("""
     Zuerst müssen wir feststellen, ob die Anwendung deutschen Strafrechts überhaupt in Frage kommt,
     da es nur unter bestimmten Bedingungen gilt.
 """)
@@ -107,6 +98,9 @@ if valid:
                 """, icon="✅")
                 st.info("""
                     Dieses Ergebnis ist eine KI-basierte Einschätzung, die nicht der Wahrheit entsprechen kann.
+                    Bitte beachte, dass dieses Tool keine Rechtsberatung ersetzt.
+                    Die Erstberatung, die dieses Tool bietet, kann womöglich in deinem spezifischen Einzelfall nicht zutreffen.
+                    Bitte konsultiere daher immer eine qualifizierte Anwältin oder einen qualifizierten Anwalt.
                     Du kannst die dazugehörigen originalen Gesetzestexte als zusätzliche Information lesen:
                     [originale Gesetzestexte](Gesetzestexte)
                 """, icon="ℹ️")
@@ -163,6 +157,9 @@ if valid:
             st.success(f"In diesem Fall handelt es sich wahrscheinlich um {result}.", icon="✅")
             st.info("""
                 Dieses Ergebnis ist nur eine vorläufige Einschätzung basierend auf deinen Eingaben.
+                Bitte beachte, dass dieses Tool keine Rechtsberatung ersetzt.
+                Die Erstberatung, die dieses Tool bietet, kann womöglich in deinem spezifischen Einzelfall nicht zutreffen.
+                Bitte konsultiere daher immer eine qualifizierte Anwältin oder einen qualifizierten Anwalt.
                 Du kannst auch die dazugehörigen originalen Gesetzestexte als zusätzliche Information lesen:
                 [originale Gesetzestexte](Gesetzestexte)
             """, icon="ℹ️")

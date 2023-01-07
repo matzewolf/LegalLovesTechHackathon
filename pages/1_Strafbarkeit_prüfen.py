@@ -40,21 +40,25 @@ germany = st.selectbox(
     "Befand sich der/die Täter\*in in Deutschland, als die Aussage getätigt wurde?",
     ["", "Ja", "Nein", "Weiß ich nicht"]
 )
-german = st.selectbox(
-    "Ist der/die Täter\*in ein:e deutsche\*r Staatsbürger\*in oder lebt der/die Täter\*in in Deutschland?",
-    ["", "Ja", "Nein", "Weiß ich nicht"]
-)
-if germany == "Ja" or german == "Ja":
+if germany == "Ja":
     valid = True
     st.markdown("In diesem Fall gilt deutsches Strafrecht.")
-elif germany == "Nein" and german == "Nein":
-    st.markdown("In diesem Fall gilt deutsches Strafrecht **nicht**.")
-elif germany == "Weiß ich nicht" or german == "Weiß ich nicht":
-    valid = True
-    st.markdown("""
-        **Möglicherweise** gilt das deutsche Strafrecht nicht in diesem Fall.
-        Falls es in diesem Fall doch gilt, kannst du die nächsten Fragen beantworten.
-    """)
+elif germany == "Nein" or germany == "Weiß ich nicht":
+    german = st.selectbox(
+        "Ist der/die Täter\*in ein:e deutsche\*r Staatsbürger\*in oder lebt der/die Täter\*in in Deutschland?",
+        ["", "Ja", "Nein", "Weiß ich nicht"]
+    )
+    if german == "Ja":
+        valid = True
+        st.markdown("In diesem Fall kommt deutsches Strafrecht in Frage.")
+    elif germany == "Nein" and german == "Nein":
+        st.markdown("In diesem Fall gilt deutsches Strafrecht **nicht**.")
+    elif germany == "Weiß ich nicht" or german == "Weiß ich nicht":
+        valid = True
+        st.markdown("""
+            **Möglicherweise** gilt das deutsche Strafrecht nicht in diesem Fall.
+            Falls es in diesem Fall doch gilt, kannst du die nächsten Fragen beantworten.
+        """)
 
 if valid:
     text = st.text_area("Gib hier die Aussage ein, die an dich gerichtet war.")

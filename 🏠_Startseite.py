@@ -39,5 +39,5 @@ if page_5:
 page_6 = st.button(
     "❔ &nbsp;&nbsp; FAQ"
 )
-if page_5:
+if page_6:
     switch_page("FAQ")

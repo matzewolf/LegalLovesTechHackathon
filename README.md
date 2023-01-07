@@ -14,5 +14,5 @@ conda activate llt
 Run streamlit locally:
 
 ```shell
-streamlit run Startseite.py
+streamlit run 🏠_Startseite.py
 ```

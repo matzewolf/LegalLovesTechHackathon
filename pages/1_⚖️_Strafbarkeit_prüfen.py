@@ -3,7 +3,6 @@ import os
 import streamlit as st
 import requests
 from dotenv import load_dotenv
-from streamlit_toggle import st_toggle_switch
 
 
 st.set_page_config(

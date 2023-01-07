@@ -36,3 +36,8 @@ page_5 = st.button(
 )
 if page_5:
     switch_page("Feedback")
+page_6 = st.button(
+    ":grey_question: &nbsp;&nbsp; FAQ"
+)
+if page_5:
+    switch_page("FAQ")

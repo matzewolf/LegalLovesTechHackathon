@@ -7,10 +7,10 @@ from dotenv import load_dotenv
 
 st.set_page_config(
     page_title="advotis – Strafbarkeit prüfen",
-    page_icon="assets/advotis_small.png",
+    page_icon="assets/advotis_icon.png",
     layout="centered",
 )
-st.sidebar.image("assets/advotis_small.png")
+st.sidebar.image("assets/advotis_logo.png")
 
 
 def category_to_result_text(category: str) -> str | None:

@@ -4,12 +4,12 @@ from streamlit_extras.switch_page_button import switch_page
 
 st.set_page_config(
     page_title="advotis",
-    page_icon="assets/advotis_small.png",
+    page_icon="assets/advotis_icon.png",
     layout="centered",
 )
-st.sidebar.image("assets/advotis_small.png")
+st.sidebar.image("assets/advotis_logo.png")
 
-st.image("assets/advotis_small.png")
+st.image("assets/advotis_logo.png")
 st.title("🏠 &nbsp; Startseite")
 page_1 = st.button("⚖️ &nbsp;&nbsp; Strafbarkeit prüfen")
 if page_1:

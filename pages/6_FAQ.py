@@ -11,7 +11,8 @@ st.sidebar.image("assets/advotis_small.png")
 st.markdown("# FAQ – Häufig gestellte Fragen")
 with st.expander("Was sind die nächsten Features auf der Roadmap?"):
     st.markdown("""
-        - Wir wollen die künstliche Intelligenz und den Fragebogen kontinuierlich verbessern.
+        - Wir wollen die künstliche Intelligenz und den Fragebogen kontinuierlich verbessern,
+          sodass die Ergebnisse zuverlässiger werden.
         - Die Integration mit Beratungsstellen und Anwälten soll flüssiger laufen,
           sodass man Berichte direkt an diese senden kann.
         - Die Analyse soll um andere Straftatbestände im Internet erweitert werden, zum Beispiel Drohungen.

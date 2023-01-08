@@ -18,6 +18,8 @@ with st.expander("Was sind die nächsten Features auf der Roadmap?"):
         - Die Analyse soll um andere Straftatbestände im Internet erweitert werden, zum Beispiel Drohungen.
         - Eine Browser-Erweiterung soll in der Lage sein,
           potenzielle Verstöße aus dem Internet direkt in advotis zu importieren.
+        - Diese Anwendung soll in mehrere Sprachen übersetzt werden,
+          um Sprachbarrieren für Anderssprachige abzubauen.
     """)
 with st.expander("Wie ist dieses Tool entstanden?"):
     st.markdown("""
